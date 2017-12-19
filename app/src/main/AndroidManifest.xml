@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.adminjs.taobao_progect">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_login_img"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme"
+        >
+        <activity android:name=".touye.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".touye.activity.CaActivity"/>
+        <activity android:name=".shouye.sousuo.activity.SearchActivity"/>
+        <activity android:name=".shouye.acticity.WebActivity"/>
+        <activity android:name=".shouye.sousuo.activity.ZhuanActivity"/>
+        <activity android:name=".shouye.acticity.TiaoActivity"/>
+        <activity android:name=".my.Denglu_yemian"/>
+        <activity android:name=".my.Register_yemian"/>
+        <activity android:name=".shouye.acticity.ZhuaActivity"/>
+
+    </application>
+
+</manifest>

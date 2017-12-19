@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:background="#ff8000"
+            android:orientation="horizontal"
+            android:layout_height="55dp">
+            <LinearLayout
+                android:id="@+id/iv_sao"
+                android:layout_width="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@mipmap/ss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="扫一扫"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/iv_sou"
+                    android:drawableLeft="@mipmap/s"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:drawableRight="@mipmap/xj"
+                    android:drawableBottom="@drawable/line"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/iv_ewm"
+                android:layout_width="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@mipmap/er"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:text="会员码"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/layout">
+    </android.support.v4.view.ViewPager>
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view_pager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+    </LinearLayout>
+        <GridView
+            android:numColumns="5"
+            android:layout_marginTop="20dp"
+            android:id="@+id/gv_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/view_pager">
+        </GridView>
+
+    <LinearLayout
+        android:id="@+id/viewfimp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/gv_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:text="淘宝"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:background="#ED2829"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:text="快报"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ViewFlipper
+            android:paddingLeft="5dp"
+            android:id="@+id/view_filpper"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:autoStart="true"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/anim_01"
+            android:outAnimation="@anim/anim_02"
+            >
+
+        </ViewFlipper>
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:text="|   "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:text="更多"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/refresh_grid_view"
+        ptr:ptrDrawable="@drawable/default_ptr_flip"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderBackground="#383838"
+        ptr:ptrHeaderTextColor="#FFFFFF"
+        android:numColumns="2"
+        android:layout_below="@+id/viewfimp"
+        />
+</RelativeLayout>

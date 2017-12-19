@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/mineuser"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/PleaseUsers"/>
+        <EditText
+            android:id="@+id/minepass"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/PleasePass"/>
+        <EditText
+            android:id="@+id/minepassAgain"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/PleasePassAgain"/>
+        <EditText
+            android:id="@+id/mineEmail"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/PleaseEmail"/>
+        <Button
+            android:id="@+id/zhuce"
+            android:textSize="20sp"
+            android:textColor="@color/colorTopEditText"
+            android:background="@drawable/corners"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/Register"/>
+        <TextView
+            android:id="@+id/back"
+            android:layout_marginTop="25dp"
+            android:text="@string/BackLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>
